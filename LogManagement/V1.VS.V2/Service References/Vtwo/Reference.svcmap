@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7ef06603-ca78-4935-aa1e-8b9794404609" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59875/AF.WS.QDS.Host/IdentifierPersonne.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IdentifierPersonne.xsd" MetadataType="Schema" ID="9b597819-207f-4a38-90ab-32015494bae7" SourceId="1" SourceUrl="http://localhost:59875/AF.WS.QDS.Host/IdentifierPersonne.svc?xsd=xsd2" />
+    <MetadataFile FileName="IdentifierPersonne1.xsd" MetadataType="Schema" ID="d99aef42-90ea-4887-be2e-da2ae805075c" SourceId="1" SourceUrl="http://localhost:59875/AF.WS.QDS.Host/IdentifierPersonne.svc?xsd=xsd0" />
+    <MetadataFile FileName="IdentifierPersonne2.xsd" MetadataType="Schema" ID="691438d4-0c5c-4540-ba52-19bae358d1c1" SourceId="1" SourceUrl="http://localhost:59875/AF.WS.QDS.Host/IdentifierPersonne.svc?xsd=xsd1" />
+    <MetadataFile FileName="IdentifierPersonne.wsdl" MetadataType="Wsdl" ID="82f72775-d01f-46a9-9ae2-5570e6497951" SourceId="1" SourceUrl="http://localhost:59875/AF.WS.QDS.Host/IdentifierPersonne.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

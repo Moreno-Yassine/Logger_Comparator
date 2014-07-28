@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="IsCustomerAgent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="civilite" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codepostal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="datenaissance" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prenom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ville" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsCustomerAgentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsCustomerAgentResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

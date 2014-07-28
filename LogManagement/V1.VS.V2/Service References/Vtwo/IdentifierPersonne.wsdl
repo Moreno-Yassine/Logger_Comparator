@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://services.axa.fr/fca/detection/2" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="IdentifierPersonne" targetNamespace="http://services.axa.fr/fca/detection/2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://services.axa.fr/fca/detection/2/Imports">
+      <xsd:import schemaLocation="http://localhost:59875/AF.WS.QDS.Host/IdentifierPersonne.svc?xsd=xsd0" namespace="http://services.axa.fr/fca/detection/2" />
+      <xsd:import schemaLocation="http://localhost:59875/AF.WS.QDS.Host/IdentifierPersonne.svc?xsd=xsd2" namespace="http://schemas.axa.fr/fca/detection/2" />
+      <xsd:import schemaLocation="http://localhost:59875/AF.WS.QDS.Host/IdentifierPersonne.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IdentifierPersonneGenerique">
+    <wsdl:part name="parameters" element="tns:IdentifierPersonneGenerique" />
+  </wsdl:message>
+  <wsdl:message name="IdentifierPersonneGeneriqueResponse">
+    <wsdl:part name="parameters" element="tns:IdentifierPersonneGeneriqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IdentifierPersonneContract_IdentiferPersonneGenerique_ServicesIndisponiblesFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.axa.fr/fca/detection/2" name="detail" element="q1:ServicesIndisponibles" />
+  </wsdl:message>
+  <wsdl:message name="IdentifierPersonneContract_IdentiferPersonneGenerique_ErreurFonctionnelleFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.axa.fr/fca/detection/2" name="detail" element="q2:ErreurFonctionnelle" />
+  </wsdl:message>
+  <wsdl:message name="IdentifierPersonneContract_IdentiferPersonneGenerique_InfoInsuffisantesFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.axa.fr/fca/detection/2" name="detail" element="q3:InfoInsuffisantes" />
+  </wsdl:message>
+  <wsdl:portType name="IdentifierPersonneContract">
+    <wsdl:operation name="IdentiferPersonneGenerique">
+      <wsdl:input wsaw:Action="http://services.axa.fr/fca/detection/2/IdentifierPersonneContract/IdentiferPersonneGenerique" name="IdentifierPersonneGenerique" message="tns:IdentifierPersonneGenerique" />
+      <wsdl:output wsaw:Action="http://services.axa.fr/fca/detection/2/IdentifierPersonneContract/IdentiferPersonneGeneriqueResponse" name="IdentifierPersonneGeneriqueResponse" message="tns:IdentifierPersonneGeneriqueResponse" />
+      <wsdl:fault wsaw:Action="http://services.axa.fr/fca/detection/2/IdentifierPersonneContract/IdentiferPersonneGeneriqueServicesIndisponiblesFault" name="ServicesIndisponiblesFault" message="tns:IdentifierPersonneContract_IdentiferPersonneGenerique_ServicesIndisponiblesFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://services.axa.fr/fca/detection/2/IdentifierPersonneContract/IdentiferPersonneGeneriqueErreurFonctionnelleFault" name="ErreurFonctionnelleFault" message="tns:IdentifierPersonneContract_IdentiferPersonneGenerique_ErreurFonctionnelleFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://services.axa.fr/fca/detection/2/IdentifierPersonneContract/IdentiferPersonneGeneriqueInfoInsuffisantesFault" name="InfoInsuffisantesFault" message="tns:IdentifierPersonneContract_IdentiferPersonneGenerique_InfoInsuffisantesFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EndpointIdentifierPersonne" type="tns:IdentifierPersonneContract">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IdentiferPersonneGenerique">
+      <soap:operation soapAction="http://services.axa.fr/fca/detection/2/IdentifierPersonneContract/IdentiferPersonneGenerique" style="document" />
+      <wsdl:input name="IdentifierPersonneGenerique">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="IdentifierPersonneGeneriqueResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServicesIndisponiblesFault">
+        <soap:fault use="literal" name="ServicesIndisponiblesFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErreurFonctionnelleFault">
+        <soap:fault use="literal" name="ErreurFonctionnelleFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InfoInsuffisantesFault">
+        <soap:fault use="literal" name="InfoInsuffisantesFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IdentifierPersonne">
+    <wsdl:port name="EndpointIdentifierPersonne" binding="tns:EndpointIdentifierPersonne">
+      <soap:address location="http://localhost:59875/AF.WS.QDS.Host/IdentifierPersonne.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

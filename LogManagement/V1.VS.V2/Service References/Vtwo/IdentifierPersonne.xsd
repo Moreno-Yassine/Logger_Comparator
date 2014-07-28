@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.axa.fr/fca/detection/2" elementFormDefault="qualified" targetNamespace="http://schemas.axa.fr/fca/detection/2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ContexteAppel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrigineAppel" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContexteAppel" nillable="true" type="tns:ContexteAppel" />
+  <xs:complexType name="DonneesContratAUTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateDeNaissanceConducteur" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateObtentionPermis" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NumPermis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlaqueImmatriculation" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DonneesContratAUTO" nillable="true" type="tns:DonneesContratAUTO" />
+  <xs:complexType name="Identifiants">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NumClient" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumAbonne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumDossier" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Identifiants" nillable="true" type="tns:Identifiants" />
+  <xs:complexType name="DonneesPersonneAIdentifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomJeuneFille" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prenom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ville" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodePostal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateDeNaissance" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DonneesPersonneAIdentifier" nillable="true" type="tns:DonneesPersonneAIdentifier" />
+  <xs:complexType name="ListeContratDetecte">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContratDetecte" nillable="true" type="tns:ContratDetecte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListeContratDetecte" nillable="true" type="tns:ListeContratDetecte" />
+  <xs:complexType name="ContratDetecte">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NumeroContrat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContratDetecte" nillable="true" type="tns:ContratDetecte" />
+  <xs:complexType name="DetenteurProduit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Detention" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetenteurProduit" nillable="true" type="tns:DetenteurProduit" />
+  <xs:complexType name="Distributeur">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NumPortefeuille" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reseau" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomDistributeur" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VilleDistributeur" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Adresse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PSNIDTiers" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPointDeVente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LibelleCommercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumOrias" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Distributeur" nillable="true" type="tns:Distributeur" />
+  <xs:complexType name="DonneesPersonneIdentifiee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Civilite" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomDeJeuneFille" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prenom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumAbonne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumFoyer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfilClient" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListeContact" nillable="true" type="tns:ListeContact" />
+      <xs:element minOccurs="0" name="Adresse1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Adresse2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Adresse3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Adresse4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodePostal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ville" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateDeNaissance" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DonneesPersonneIdentifiee" nillable="true" type="tns:DonneesPersonneIdentifiee" />
+  <xs:complexType name="ListeContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PointDeContact" nillable="true" type="tns:PointDeContact" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListeContact" nillable="true" type="tns:ListeContact" />
+  <xs:complexType name="PointDeContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Detail" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PointDeContact" nillable="true" type="tns:PointDeContact" />
+  <xs:complexType name="Segmentation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SegmentClientele" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AxaPartenaire" type="xs:boolean" />
+      <xs:element minOccurs="0" name="VIP" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Segmentation" nillable="true" type="tns:Segmentation" />
+  <xs:complexType name="StatutFoyer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StatutFCA" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatutFoyer" nillable="true" type="tns:StatutFoyer" />
+  <xs:complexType name="ServicesIndisponibles">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServicesIndisponibles" nillable="true" type="tns:ServicesIndisponibles" />
+  <xs:complexType name="ErreurFonctionnelle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErreurFonctionnelle" nillable="true" type="tns:ErreurFonctionnelle" />
+  <xs:complexType name="InfoInsuffisantes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoInsuffisantes" nillable="true" type="tns:InfoInsuffisantes" />
+</xs:schema>

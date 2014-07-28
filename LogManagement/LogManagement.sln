@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{34B43B90-215C-4083-A367-33D4CCD12F78}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "KpiCenter", "AppliSetup\AppliSetup.vdproj", "{5D5C333C-FF46-408F-A6DE-25CC96E56EF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V1.VS.V2", "V1.VS.V2\V1.VS.V2.csproj", "{AF1ABEEE-6517-4681-BD7A-6DA6D8C1762A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34B43B90-215C-4083-A367-33D4CCD12F78}.Debug|x86.ActiveCfg = Debug|x86
+		{34B43B90-215C-4083-A367-33D4CCD12F78}.Debug|x86.Build.0 = Debug|x86
+		{34B43B90-215C-4083-A367-33D4CCD12F78}.Release|x86.ActiveCfg = Release|x86
+		{34B43B90-215C-4083-A367-33D4CCD12F78}.Release|x86.Build.0 = Release|x86
+		{5D5C333C-FF46-408F-A6DE-25CC96E56EF2}.Debug|x86.ActiveCfg = Debug
+		{5D5C333C-FF46-408F-A6DE-25CC96E56EF2}.Release|x86.ActiveCfg = Release
+		{AF1ABEEE-6517-4681-BD7A-6DA6D8C1762A}.Debug|x86.ActiveCfg = Debug|x86
+		{AF1ABEEE-6517-4681-BD7A-6DA6D8C1762A}.Debug|x86.Build.0 = Debug|x86
+		{AF1ABEEE-6517-4681-BD7A-6DA6D8C1762A}.Release|x86.ActiveCfg = Release|x86
+		{AF1ABEEE-6517-4681-BD7A-6DA6D8C1762A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

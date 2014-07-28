@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.axa.fr/fca/detection/2" elementFormDefault="qualified" targetNamespace="http://services.axa.fr/fca/detection/2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:59875/AF.WS.QDS.Host/IdentifierPersonne.svc?xsd=xsd2" namespace="http://schemas.axa.fr/fca/detection/2" />
+  <xs:element name="IdentifierPersonneGenerique">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.axa.fr/fca/detection/2" minOccurs="0" name="ContexteDappel" nillable="true" type="q1:ContexteAppel" />
+        <xs:element xmlns:q2="http://schemas.axa.fr/fca/detection/2" minOccurs="0" name="ContratAIdentifier" nillable="true" type="q2:DonneesContratAUTO" />
+        <xs:element xmlns:q3="http://schemas.axa.fr/fca/detection/2" minOccurs="0" name="Identifiants" nillable="true" type="q3:Identifiants" />
+        <xs:element xmlns:q4="http://schemas.axa.fr/fca/detection/2" minOccurs="0" name="PersonneAIdentifier" nillable="true" type="q4:DonneesPersonneAIdentifier" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdentifierPersonneGeneriqueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeRetour" type="xs:short" />
+        <xs:element xmlns:q5="http://schemas.axa.fr/fca/detection/2" minOccurs="0" name="ContratsDetectes" nillable="true" type="q5:ListeContratDetecte" />
+        <xs:element xmlns:q6="http://schemas.axa.fr/fca/detection/2" minOccurs="0" name="DetenteurProduitAppelant" nillable="true" type="q6:DetenteurProduit" />
+        <xs:element xmlns:q7="http://schemas.axa.fr/fca/detection/2" minOccurs="0" name="Distrib" nillable="true" type="q7:Distributeur" />
+        <xs:element xmlns:q8="http://schemas.axa.fr/fca/detection/2" minOccurs="0" name="PersonneIdentifiee" nillable="true" type="q8:DonneesPersonneIdentifiee" />
+        <xs:element xmlns:q9="http://schemas.axa.fr/fca/detection/2" minOccurs="0" name="SegmentationClient" nillable="true" type="q9:Segmentation" />
+        <xs:element xmlns:q10="http://schemas.axa.fr/fca/detection/2" minOccurs="0" name="StatutDuFoyer" nillable="true" type="q10:StatutFoyer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
