@@ -1,4 +1,4 @@
-Logger_Comparator_AXA
+Logger_Comparator
 =====================
 
 Summer Internship, Modules
